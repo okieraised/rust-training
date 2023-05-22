@@ -6,6 +6,13 @@ fn main() {
     println!("first word is '{}'", word);
 
     s.clear();
+
+    let s = String::from("hello world");
+
+    let hello = &s[0..5];
+    let world = &s[6..11];
+
+    println!("hello is '{}', world is '{}'", hello, world)
 }
 
 fn first_word(s: &String) -> usize {

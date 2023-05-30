@@ -79,6 +79,26 @@ fn main() {
         other => move_player(other),
     }
 
+
+    let config_max = Some(6u8);
+    match config_max {
+        Some(max) => println!("the max is configured to be {}", max),
+        _ => (),
+    }
+
+    let config_max = Some(3u8);
+    if let Some(max) = config_max {
+        println!("the max is configured to be {}", max);
+    }
+
+    let mut count = 0;
+    let coin = Coin::Quarter(UsState::Oklahoma);
+    if let Coin::Quarter(state) = coin {
+        println!("state is {:?}", state);
+    } else {
+        count += 1;
+    }
+
 }
 
 fn route(ip_kind: IpAddrKind) {}
